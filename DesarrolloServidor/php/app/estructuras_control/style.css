@@ -1,0 +1,56 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cajas individuales */
+.box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+.box h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: #2c3e50;
+}
+
+/* Lista */
+.box ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.box ul li {
+    margin-bottom: 5px;
+}
+
+/* Imágenes de dados */
+.box img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Separadores */
+.box hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
