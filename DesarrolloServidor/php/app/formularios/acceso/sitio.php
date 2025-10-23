@@ -2,7 +2,7 @@
     $nombre = isset($_GET['nombre']) ? htmlspecialchars(filter_input(INPUT_GET, 'nombre')):null;
 
     if (is_null($nombre)) {
-        header("location: index.php?msj=debes identificarte");
+        header("location: racional.php?msj=debes identificarte");
         exit();
     }
 

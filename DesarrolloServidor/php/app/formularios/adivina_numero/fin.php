@@ -15,7 +15,7 @@
             }
             break;
         default:
-            header("location: index.php");
+            header("location: racional.php");
             exit();
     }
 

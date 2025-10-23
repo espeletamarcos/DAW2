@@ -45,7 +45,7 @@
         case 'Volver':
             break;
         default:
-            header("Location: index.php");
+            header("Location: racional.php");
             exit();
     }
 
