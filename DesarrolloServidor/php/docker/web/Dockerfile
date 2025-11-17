@@ -4,6 +4,7 @@ RUN echo "<Directory /var/www/html>" >> /etc/apache2/sites-enabled/000-default.c
 RUN echo "Options +Indexes" >> /etc/apache2/sites-enabled/000-default.conf
 RUN echo "</Directory>" >> /etc/apache2/sites-enabled/000-default.conf
 
-
+RUN pecl install xdebug
+RUN docker-php-ext-enable xdebug
 
 EXPOSE 80

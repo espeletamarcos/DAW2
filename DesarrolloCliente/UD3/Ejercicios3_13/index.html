@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios 3_13</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <h2>Ejercicio 1 - Múltiplos de 3 </h2>
+    <p id="multiplos">Múltiplos: <br /></p>
+    <p id="numeros">Total de números impresos: <br /></p>
+
+    <h2>Ejercicio 2 - Máximo y mínimo</h2>
+    <label>Introduce un número:</label>
+    <input type="number" id="numero"/>
+    <button onclick="agregarNumero()">Agregar número</button>
+    <p id="minimo"></p>
+    <p id="maximo"></p>
+    
+    <h2>Ejercicio 3 - Verificar tallas</h2>
+    <label>Introduce una talla: </label>
+    <input type="text" id="inputTalla"/>
+    <button onclick="verificarTalla()">Verificar talla</button>
+    <p id="talla"></p>
+
+    <h2>Ejercicio 4 - Calculadora longitud círculo</h2>
+    <label>Introduce el radio del círculo: </label>
+    <input type="number" id="inputRadio"/>
+    <button onclick="calcularLongitud()">Calcular longitud</button>
+    <p id="longitud"></p> 
+
+    <h2>Ejercicio 5 - Generador Euromillón</h2>
+    <p id="euromillon"></p> 
+
+    <h2>Ejercicio 6 - Matriz</h2>
+    <label>Introduce el número de filas:</label>
+    <input type="number" id="filas"/>
+    <br />
+    <label>Introduce el número de columnas:</label>
+    <input type="number" id="columnas"/>
+    <br />
+    <button onclick="generarMatriz()">Generar matriz</button>
+    <p id="patron"></p>
+
+    <h2>Ejercicio 7 - Calculadora</h2>
+    <button onclick=agregarValor(1)>1</button>
+    <button onclick=agregarValor(2)>2</button>
+    <button onclick=agregarValor(3)>3</button>
+    <button onclick="operar('+')">+</button>
+    <br />
+    <button onclick=agregarValor(4)>4</button>
+    <button onclick=agregarValor(5)>5</button>
+    <button onclick=agregarValor(6)>6</button>
+    <button onclick="operar('-')">-</button>
+    <br />
+    <button onclick=agregarValor(7)>7</button>
+    <button onclick=agregarValor(8)>8</button>
+    <button onclick=agregarValor(9)>9</button>
+    <button onclick="operar('*')">*</button>
+    <br />
+    <button onclick=agregarValor(0)>0</button>
+    <button onclick=borrarTodo()>C</button>
+    <button onclick=calcular()>=</button>
+    <button onclick="operar('/')">/</button>
+    <br />
+    <input type="text" id="cuadro">
+    <br />
+
+    <h2>Ejercicio 8 - Mostrar Más</h2>
+    <h3>Noticias Paginas Web</h3>
+    <p>En el instituto, como ESCUELA PROMOTORA DE SALUD y dentro del proyecto de salud, llevamos
+    varios años colaborando con Donantes de Sangre de Zaragoza. Esta colaboracion consiste en facil
+    itarles, un espacio en nuestro...</p>
+    <p id="demo1"></p>
+    <button type="button" onclick="myFunction()">Seguir Leyendo</button>
+</body>
+</html>

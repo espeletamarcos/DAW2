@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+ function clickCounter() {
+ if (typeof(Storage) !== "undefined") {
+ if (sessionStorage.clickcount) {
+ sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+ } else {
+ sessionStorage.clickcount = 1;
+ }
+ document.getElementById("result").innerHTML = "Has hecho click " + sessionStorag
+e.clickcount + " veces en esta sesion.";
+ } else {
+ document.getElementById("result").innerHTML = "Lo sentimos, tu navegador no soporta el objeto Storage...";
+ }
+ }
+ </script>
+</head>
+<body>
+ <p><button onclick="clickCounter()" type="button">Haz Click</button></p>
+ <div id="result"></div>
+ <p>Contador</p>
+ <p>Cierra el navegador y comprueba que no hay ningun dato almacenado</p>
+</body>
+</html>

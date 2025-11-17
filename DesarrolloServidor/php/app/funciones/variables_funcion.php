@@ -18,6 +18,11 @@ $mayor = function (int $a, int $b) use (&$nombre): string{
     };
 };
 
+// Referenciar a funciones desde funciones anónimas
+$factorial = function ($x) use (&$factorial) {
+    return $x == 0 ? 1 : $x * $factorial($x - 1);
+};
+
 $a = rand(1, 10);
 $b = rand(1, 10);
 $rtdo = $mayor($a, $b);
