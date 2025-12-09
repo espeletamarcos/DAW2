@@ -1,0 +1,10 @@
+table{
+    th{
+        background-color: #007BFF;
+        color: white;
+    }
+}
+
+tr:nth-child(even){
+    background-color: rgb(227, 234, 255);
+}

@@ -1,0 +1,11 @@
+{
+    "name": "root/instituto",
+    "autoload": {
+        "psr-4": {
+            "Class\\": "Class"
+        }
+    },
+    "require": {
+        "fakerphp/faker": "^1.24"
+    }
+}

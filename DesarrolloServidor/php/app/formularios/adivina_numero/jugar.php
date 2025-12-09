@@ -19,7 +19,7 @@
             $resultado = $_POST['resultado'];
             $jugada = $_POST['jugada'];
             if($jugada >= $intentos) {
-                header("location: fin.php?jugada=$jugada&intentos=$intentos&resultado=$resultado");
+                header("location: finJuego.php?jugada=$jugada&intentos=$intentos&resultado=$resultado");
                 exit();
             }
             $jugada++;
@@ -37,7 +37,7 @@
                     break;
                 }
                 case '=': {
-                    header("location: fin.php?jugada=$jugada&intentos=$intentos");
+                    header("location: finJuego.php?jugada=$jugada&intentos=$intentos");
                     exit();
                 }
             }
