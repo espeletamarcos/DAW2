@@ -1,8 +1,18 @@
 <?php
 
-    require "controlador.php";
+require_once 'vendor/autoload.php';
+require "controlador.php";
 
-    use MasterBind\Plantilla;
+use MasterBind\Modelo\Plantilla;
+
+use Dotenv\Dotenv;
+
+try {
+    $dotenv = Dotenv::createImmutable(__DIR__);
+    $dotenv->safeLoad(); // Carga $_ENV con tus credenciales de DB
+} catch (\Dotenv\Exception\InvalidPathException $e) {
+    die("ERROR: No se pudo cargar el archivo .env.");
+}
 
 ?>
 
@@ -13,13 +23,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master Bind - Jugando</title>
     <link rel="stylesheet" href="./css/estilo.css" type="text/css">
-    <script>
-        function cambia_color(numero) {
-            color = document.getElementById("combinacion" + numero).value;
-            elemento = document.getElementById("combinacion" + numero);
-            elemento.className = color;
-        }
-    </script>
+    <script src="script.js"></script>
+    <link>
 </head>
 <body>
 <div class="contenedorJugar">

@@ -1,6 +1,25 @@
 <?php
-session_start();
-session_destroy();
+
+    require_once 'vendor/autoload.php';
+
+    session_start();
+    session_destroy();
+
+    use Dotenv\Dotenv;
+
+    try {
+        $dotenv = Dotenv::createImmutable(__DIR__);
+        $dotenv->safeLoad(); // Carga $_ENV con tus credenciales de DB
+    } catch (\Dotenv\Exception\InvalidPathException $e) {
+        die("ERROR: No se pudo cargar el archivo .env.");
+    }
+
+    $usuario = $_SESSION["usuario"]??null;
+    if(is_null($usuario)){
+        header("location: login.php");
+        exit;
+    }
+
 ?>
 <!--
 RF1 Mostramos la pantalla según estilo (Opciones, Información, Jugada)
@@ -33,8 +52,8 @@ RF2 Botón de reiniciar la clave (guardándola en sesión)
             <li>No se especificará cuáles son las posiciones acertadas en caso de acierto.</li>
         </ol>
         <hr/>
-        <form action="jugar.php">
-            <input type="submit" value="Empezar a jugar">
+        <form action="jugar.php" method="post">
+            <input type="submit" name="submit" value="Empezar a jugar">
         </form>
     </div>
 </div>

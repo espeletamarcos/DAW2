@@ -1,0 +1,14 @@
+https://web.infenlaces.com/dwes/practicas/MasterMind/jugar.php?
+
+Clave
+    $clave
+    generarClave()
+    getClave()
+Jugada
+    $jugada
+    $posicion
+    $colores
+    comprobarJugada()
+    mostrarResultado()
+Plantilla
+    ***Todos los métodos estáticos

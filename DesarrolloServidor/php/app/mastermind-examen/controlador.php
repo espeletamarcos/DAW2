@@ -2,9 +2,8 @@
 
     require 'vendor/autoload.php';
 
-    use MasterBind\Clave;
-    use MasterBind\Jugada;
-    use MasterBind\Plantilla;
+use MasterBind\Modelo\Clave;
+use MasterBind\Modelo\Jugada;
 
     session_start();
 
@@ -57,6 +56,13 @@
                 if (isset($_SESSION['jugadas']) && !empty($_SESSION['jugadas'])) {
                     $informacion .= Jugada::obtener_historico_jugadas();
                 }
+            }
+            break;
+        case "Empezar a jugar":
+            break;
+        default:
+            if(!isset($_SESSION["usuario"])){
+                header("location: ./index.php");
             }
             break;
     }

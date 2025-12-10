@@ -1,0 +1,291 @@
+/*#masterMind{*/
+/*    display: flex;*/
+
+/*    > *{*/
+/*        width: 100%;*/
+/*        height: 95vh;*/
+/*    }*/
+
+/*    > #opciones{*/
+
+/*        > .contenido {*/
+/*            display: flex;*/
+/*            flex-direction: column;*/
+/*            align-items: center;*/
+/*            justify-content: center;*/
+/*            gap: 20px;*/
+
+/*            margin: 10px;*/
+/*            background-color: rgb(255, 247, 232);*/
+/*            border: 2px #002ec5 solid;*/
+
+/*            form {*/
+/*                display: flex;*/
+/*                flex-direction: column;*/
+/*                gap: 20px;*/
+
+/*                align-items: center;*/
+/*                justify-content: center;*/
+
+
+/*                padding: 20px;*/
+/*                background-color: rgb(216, 216, 216);*/
+/*                border-radius: 10px;*/
+/*                border: 2px black solid;*/
+
+/*                > #selectsColores {*/
+/*                    display: flex;*/
+/*                    gap: 10px;*/
+/*                }*/
+/*            }*/
+
+/*            #accionesPosibles {*/
+/*            }*/
+
+/*            #menuJugar {*/
+/*            }*/
+/*        }*/
+/*    }*/
+/*    > #informacion{*/
+
+/*        > .contenido {*/
+/*            display: flex;*/
+/*            flex-direction: column;*/
+/*            align-items: center;*/
+/*            justify-content: center;*/
+/*            gap: 20px;*/
+
+/*            margin: 10px;*/
+/*            background-color: rgb(255, 247, 232);*/
+/*            border: 2px #002ec5 solid;*/
+
+/*            .jugadas {*/
+/*                width: 100%;*/
+/*                height: 600px;*/
+/*                display: flex;*/
+/*                flex-direction: column;*/
+/*                align-items: center;*/
+/*                justify-content: center;*/
+
+/*                overflow-y: auto;*/
+
+/*                > .jugada {*/
+/*                    display: flex;*/
+/*                    align-items: center;*/
+/*                    justify-content: center;*/
+/*                    flex-direction: column;*/
+
+/*                    > .textoJugada {*/
+
+/*                    }*/
+
+/*                    > .informacionJugada {*/
+/*                        display: flex;*/
+/*                        gap: 5px;*/
+
+/*                        > .posiciones {*/
+/*                            display: flex;*/
+/*                            gap: 5px;*/
+
+/*                            > * {*/
+/*                                padding: 5px;*/
+
+/*                                display: flex;*/
+/*                                align-items: center;*/
+/*                                justify-content: center;*/
+
+/*                                border-radius: 3px;*/
+/*                            }*/
+
+/*                            > .posicionNegra {*/
+/*                                background-color: black;*/
+/*                                color: white;*/
+/*                            }*/
+
+/*                            > .posicionBlanca {*/
+/*                                border: 1px black solid;*/
+/*                            }*/
+/*                        }*/
+/*                    }*/
+/*                }*/
+/*            }*/
+/*        }*/
+/*    }*/
+/*}*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    align-items: center;
+    justify-content: center;
+
+
+    padding: 20px;
+    background-color: rgb(216, 216, 216);
+    border-radius: 10px;
+    border: 2px black solid;
+
+    > #selectsColores {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+.colores{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+
+    > p {
+        padding: 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+h1{
+    font-size: 60px;
+    color: purple;
+    font-weight: bold;
+    text-align: center;
+}
+h2{
+    font-size: 30px;
+    color: #000280;
+    font-weight: bold;
+    text-align: center;
+}
+p{
+    padding: 10px;
+}
+
+.mensajeInfo{
+    color: purple;
+    font-weight: bold;
+}
+.mensajeError{
+    color: red;
+    font-weight: bold;
+}
+
+
+.colorAzul{
+    background-color: blue;
+    color: white;
+}
+.colorRojo{
+    background-color: red;
+    color: black;
+}
+.colorNaranja{
+    background-color: orange;
+    color: black;
+}
+.colorVerde{
+    background-color: green;
+    color: white;
+}
+.colorVioleta{
+    background-color: violet;
+    color: black;
+}
+.colorAmarillo{
+    background-color: yellow;
+    color: black;
+}
+.colorMarrón{
+    background-color: brown;
+    color: white;
+}
+.colorRosa{
+    background-color: pink;
+    color: black;
+}
+
+#masterMind{
+    display: flex;
+
+    > *{
+        width: 100%;
+        height: 95vh;
+    }
+
+    > .seccion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+
+        margin: 10px;
+        background-color: rgb(255, 247, 232);
+        border: 2px #002ec5 solid;
+
+        > .contenido{
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 20px;
+        }
+    }
+}
+
+#jugadas {
+    width: 100%;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow-y: auto;
+
+    > .jugada {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        > .informacionJugada {
+            display: flex;
+            gap: 5px;
+
+            > .posiciones {
+                display: flex;
+                gap: 5px;
+
+                > * {
+                    padding: 5px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    border-radius: 3px;
+                }
+
+                > .posicionNegra {
+                    background-color: black;
+                    color: white;
+                }
+
+                > .posicionBlanca {
+                    border: 1px black solid;
+                }
+            }
+        }
+    }
+}

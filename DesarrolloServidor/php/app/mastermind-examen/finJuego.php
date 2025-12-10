@@ -1,9 +1,17 @@
 <?php
     require 'vendor/autoload.php';
 
-    use MasterBind\Clave;
-    use MasterBind\Jugada;
-    use MasterBind\Plantilla;
+    use MasterBind\Modelo\Clave;
+    use MasterBind\Modelo\Jugada;
+
+    use Dotenv\Dotenv;
+
+    try {
+        $dotenv = Dotenv::createImmutable(__DIR__);
+        $dotenv->safeLoad(); // Carga $_ENV con tus credenciales de DB
+    } catch (\Dotenv\Exception\InvalidPathException $e) {
+        die("ERROR: No se pudo cargar el archivo .env.");
+    }
 
     session_start();
 

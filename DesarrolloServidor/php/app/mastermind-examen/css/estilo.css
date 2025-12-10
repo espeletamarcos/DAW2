@@ -168,38 +168,62 @@ option{
 }
 
 .Azul {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
     background-color: blue;
     color: white;
 }
 
 .Rojo {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
     background-color: red;
     color: white;
 }
 
 .Naranja {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
     background-color: orange;
 }
 
 .Verde {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
     background-color: green;
     color: white;
 }
 
 .Violeta {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
     background-color: violet;
 }
 
 .Amarillo {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
     background-color: yellow;
 }
 
 .Marron {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
     background-color: brown;
     color: white;
 }
 
 .Rosa {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
     background-color: pink;
 }
 
